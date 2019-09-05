@@ -1,0 +1,25 @@
+//求 （-1）的n-1次方乘以 1/（2*n-1）的前n项和
+
+#include<stdio.h>
+#include<math.h>
+int main(void){
+	int n;
+	double x=1; 
+	double y;	//每一项
+	double sum = 0; //累加器
+	
+	printf("请输入一个整数n:");
+	scanf("%d",&n);
+  //写出通项
+	for(int i = 1; i <= n ; i ++){
+		x =(double) 1/(2*i-1);
+	//符号判断
+		if(i %2 == 1)
+			sum =sum +x;
+		else
+			sum =sum-x;
+	}
+	
+	printf("%f\n",sum);
+	return 0;
+}
