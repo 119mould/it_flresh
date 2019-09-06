@@ -1,0 +1,19 @@
+ #include"stdio.h"
+ #include"stdlib.h"
+ //产生100以内的随机数 判断是否相等 
+ int main(void){
+ 	int a,b ;
+	//rand()函数存在stdlib.h头文件里，用于产生0-randmax之间的数
+	a = rand()%100; 
+	printf("请输入0-100（开区间）之间的整数b：");
+	scanf("%d",&b) ;
+	
+	printf("\na=%d,b=%d",a,b);
+	if(a == b){
+		printf("\n a等于b");
+	}else{
+		printf("\n a不等于b");
+	}
+	return 0; 
+ 	
+ } 
