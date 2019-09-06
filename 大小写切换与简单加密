@@ -1,0 +1,24 @@
+#include"stdio.h"
+#include"stdlib.h"
+//大小写转化以及加密问题 
+int main(void){
+	char c;
+	printf("请输入一个字母：");
+	do{
+		 
+		scanf("%c",&c);
+		
+		if(c >='a' && c <='z'){
+			//小写换大写字母，减去32
+		 c-=32;
+		
+		 
+		} 
+		else if(c>='A'&&c<='Z'){
+			c+=32;
+			
+		}
+		printf("\n%c",c);
+	} while(c != '#');
+	return 0;
+}
