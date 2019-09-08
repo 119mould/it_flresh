@@ -1,0 +1,19 @@
+#include<stdio.h>
+//水仙花数，一个三位数等于百位，十位及个位的立方和，153 = 1^3 + 5^3 + 3^3 
+int main (void){
+	int a , hun,dec,unit,sum,top,tho;
+	printf("请输入一个非负五位整数a："); 
+	scanf("%d",&a);
+	//从高到低依次取位数 
+	top = a / 10000 ; printf("%d 是万位\n",top);
+	tho = a /1000%10; printf("%d 是千位\n",tho);
+	hun = a / 100%10;	printf("%d 是百位\n",hun);
+	dec = a/10%10;	printf("%d 是十位\n",dec);
+	unit = a %10 ; 	printf("%d 是个位\n",unit);
+	
+	sum = top * 1 +tho * 10 +hun* 100 + dec*1000 +unit*10000;
+
+	printf("倒序输出：%d",sum);
+	
+	return 0;
+}
