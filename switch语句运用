@@ -1,0 +1,40 @@
+#include"stdio.h"
+//根据不同的里程经行奖励 ，已知基本的运费每吨为a,货物重为w,距离为s,计算总的运费f, 
+int main(void){
+	float s,f,p;//里程数和奖励
+	int i ,w,m;
+	int a=1 ;//设为每吨基本的运费 
+	printf("请输入相应的里程数：");
+	scanf("%f",&s);
+	printf("请输入相应的吨数（取整）：");
+	scanf("%d",&w);
+	f = a*w*s;
+	m =(int)s/250;
+	if( m <=2 && m >= 1)
+		i = 1;	// 250 -500 吨.0.02的折扣
+	else if(m > 2 && m <=4   ){
+		i = 2 ;	// 500 -1000  吨.0.05的折扣
+	} 
+	
+	else if(m > 4 && m <=8   ){
+		i = 3 ;	// 1000 - 2000   吨.0.08的折扣
+	} 
+	else if(m > 8 && m <=12   ){
+		i = 4 ;	// 2000 - 3000   吨.0.1的折扣
+	} 
+	else if(m > 8   ){
+		i = 5 ;	// 3000   吨以上.0.15的折扣
+	} 
+	switch(i){
+		case 0:
+		case 1: f *=(0.98) ;break;
+		case 2: f *= (0.95) ;break;
+		case 3: f *= (0.92);break;
+		case 4: f*=(0.9);break;
+		case 5: f*=(0.85);break;
+	} 
+	printf("%f",f);
+	return 0;
+	
+	
+} 
