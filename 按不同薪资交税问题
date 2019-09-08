@@ -1,0 +1,27 @@
+#include<stdio.h>
+	//薪水按不同的界交税，2000元起，一千元为一档，5000元为上限考察switch 的运用 
+int main(void){
+	float s,p; //薪水及税钱 
+	int i;
+	
+	printf("请输入月收入：");
+	scanf("%f",&s);
+	//提取千位
+	if(s >= 5000){
+		i =5;
+	} else{
+		i = s/1000;	//提取千位数字 
+	}
+	
+	switch(i){
+		
+		case 1:p = 0 ;break;
+		case 2:p =(s-2000) * 0.05; break;
+		case 3:p = 50+(s- 3000 )* 0.1; break;
+		case 4 :p = 150+(s-4000) * 0.15;break;
+		case 5 : p = 300+(s-5000)* 0.2;break;	}
+	printf("税钱为：%.3f",p);
+	
+	return 0; 
+	 
+} 
