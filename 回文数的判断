@@ -24,3 +24,33 @@ int main(void){
 	return 0;
 	
 } 
+
+
+/*
+方法2
+#include<stdio.h>
+#include<string.h>
+//回文 及一个数关于中心对称
+//用到的方法 ，string中的 strlen 方法，返回字符的个数，再进行对称比较
+int main(void){
+	int m =0,n;
+	scanf("%d",&n);
+	
+	do{
+		m= m* 10 +n %10 ;
+		n = n/10;
+		printf("%d\n",m);
+	}while(n!= 0);
+	
+	/*例如给N赋值123456
+		step1：m=6，n=12345
+		step2：m=65，n=1234
+		... 
+		取反的过程 
+	*/ 
+	 
+	
+	return 0;
+	
+} 
+*/
