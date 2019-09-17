@@ -1,0 +1,10 @@
+def getValue(b,r,n):  #声明函数，b为本金，r为年利率，n为年数
+        v = b * ((1+r)**n)
+        return v
+
+str1 = float(input("请输入本金："))
+str2 = float(input("请输入年利率："))
+str3 = int(input("请输入年数："))
+
+total = getValue(str1,str2,str3)    #函数调用
+print(str.format("最终收益是：{0:2.2f}",total))
