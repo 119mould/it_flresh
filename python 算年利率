@@ -1,0 +1,13 @@
+
+##输入方式为 str = input （ “请输入：”）；input输入为字符型
+str1 =float( input("请输入本金:"))
+str2 =float( input("请输入年利率："))
+str3 = int( input("请输入年数:"))
+
+
+#for循环 for i in range(1,6,1)  1,2,3,4,5
+#       for i in （1.2，3），那么只有三次循环，循环变量为1，2，3
+for i in range(1,str3+1,1 ):
+    str1 = str1 * (1+(str2 / 100) )
+#输出格式
+print(str.format("本金利率和为：{0:2.2f}",str1))
