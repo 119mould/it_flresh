@@ -1,0 +1,7 @@
+import   datetime 
+str1 = input("请输入您的姓名：")
+str2 = int(input("请输入您的出生年份："))
+year = datetime.date.today().year#获取今天日期的年数
+print("当前是",year,"年")
+old = year - str2
+print("您好！{0}，您{1}岁。".format(str1,old))
