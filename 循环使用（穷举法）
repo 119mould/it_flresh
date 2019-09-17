@@ -1,0 +1,26 @@
+/*
+有五个地方，abcde,
+1. 如果去A地，则必须去B地
+2.D与E两地中只能选择一地
+3.C与B地两地只能去一地
+4.C与D要么都去要么都不去
+5如果去E地，则必须去A,D两地 
+*/
+
+#include<stdio.h>
+int main(void){
+	
+	int a,b,c,d,e;
+		for(a=0; a<2 ;a++)
+			for(b=0; b<2 ; b++)
+				for(c=0 ;c <2 ; c++)
+					for(d=0 ; d <2 ;d++)
+						for(e =0 ; e <2 ; e++ ){
+							if((a&&b||!a)&&(d+e==1)&&(b+c==1) && (c&&d||!c&&!d)&&(e&&a&&d||!e))
+					{if(a) printf("去A地\n");
+					if(b) printf("去b地\n");
+					if(c) printf("去c地\n");
+					if(d) printf("去d地\n");
+					if(e) printf("去e地\n");
+						}	} 
+	} 
