@@ -40,3 +40,24 @@ int isprime(int n){
 	} 
 	return flag;
 }
+
+/*
+n的阶乘的调用
+
+#include<stdio.h>
+int jc(int n){
+	int m;
+	if(n == 1) m=1;
+	else m = n*jc(n-1);
+	return m;
+}
+
+int main(void){
+	int n;
+	printf("请输入一个非0整数：");
+	scanf("%d",&n);
+	//递归调用 
+	jc(n); 
+	printf("%d",jc(n));//jc(n)返回就是 m值 
+} 
+*/
