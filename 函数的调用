@@ -1,0 +1,42 @@
+/*
+函数调用
+
+输出连续相邻的15对孪生素数，使用函数判断一个数是不是素数
+
+
+算法分析：
+素数为只能被1和它本身相除的断 
+*/
+
+#include<stdio.h>
+#include<math.h>
+
+int isprime(int n);	//函数申明 
+int main(void){
+	
+		int k, n;
+		//k为从2开始的数，一直找到相邻的素数，n为15对数的判断标志
+		n=0;
+		k=2;
+		while(n<15)	//n为15对素数
+		{
+			if(isprime(k)&&isprime(k+2)){	//函数调用
+				n++;
+				printf("%d,%d\n",k,k+2);	//输出素数
+				 
+				
+			} 
+			k++;
+		} 
+	
+	} 
+int isprime(int n){
+	int flag=1;	//标志位
+	int k=2;
+	while(k<=(int)sqrt(n) && flag){
+		if(n%k==0)
+		flag=0;
+		k++;
+	} 
+	return flag;
+}
